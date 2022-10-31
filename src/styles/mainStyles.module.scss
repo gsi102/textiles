@@ -1,0 +1,61 @@
+/* Circular Medium */
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/Circular/Circular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/Circular/Circular.eot") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/Circular/Circular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/Circular/Circular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/Circular/Circular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../assets/fonts/Circular/Circular.svg")
+      format("svg"); /* Legacy iOS */
+}
+
+body,
+html {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Circular", sans-serif;
+}
+
+*:before,
+*:after {
+  font-family: "Circular", sans-serif;
+}
+
+/* IOS will zoom, unless you use 16px on the input without the focus. */
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-size: 16px;
+}
+
+.darkTheme {
+  filter: invert(100%);
+}
+
+.noChangeTheme {
+  filter: invert(1);
+}
