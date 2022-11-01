@@ -1,0 +1,116 @@
+@use "../Header/Header.module.scss" as header;
+@use "../../styles/mainStyles.module.scss" as global;
+
+$closeBtnWidth: 2.5rem;
+$closeBtnBorder: 3px;
+
+.about {
+  top: header.$headerPadding + header.$headerHeight + header.$headerPadding;
+  right: 0;
+  position: absolute;
+  display: block;
+  width: 40%;
+  height: 100vh;
+  background-color: white;
+  transform: translateX(150%);
+  opacity: 0;
+  transition: all 0.3s linear;
+
+  -webkit-appearance: none;
+  -webkit-box-shadow: -10px 2px 10px global.$colorShadow; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: -10px 2px 10px global.$colorShadow; /* Firefox 3.5 - 3.6 */
+  box-shadow: -10px 2px 10px global.$colorShadow;
+
+  & > hr {
+    opacity: 0.2;
+    background-color: global.$colorShadow;
+  }
+}
+
+.aboutShow {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.aboutRemove {
+  display: none;
+}
+
+.about__sections {
+  width: 100%;
+  height: calc($closeBtnWidth + $closeBtnBorder * 2);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.about__sections__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  height: 100%;
+}
+
+.activeSection {
+  transition: all 0.3s linear;
+  color: black;
+  background-color: global.$colorPeach;
+}
+
+.about__preloader {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about__closeBtn {
+  top: 0;
+  left: calc(0rem - $closeBtnWidth - $closeBtnBorder * 2);
+  position: absolute;
+  display: block;
+  width: $closeBtnWidth;
+  height: $closeBtnWidth;
+  border: $closeBtnBorder solid global.$colorPeach;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: global.$colorPeach;
+    cursor: pointer;
+  }
+
+  &:hover:before,
+  &:hover:after {
+    background-color: black;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2rem;
+    height: $closeBtnBorder;
+    background-color: global.$colorPeach;
+  }
+
+  &:before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

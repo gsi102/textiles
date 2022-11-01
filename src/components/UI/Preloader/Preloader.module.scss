@@ -1,0 +1,15 @@
+.preloaderDark {
+  img {
+    width: 64px;
+    display: block;
+    content: url("../../../assets/img/preloaderBlack.gif");
+  }
+}
+
+.preloaderLight {
+  img {
+    width: 64px;
+    display: block;
+    content: url("../../../assets/img/preloaderWhite.gif");
+  }
+}

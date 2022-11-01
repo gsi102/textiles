@@ -1,0 +1,67 @@
+@use "../../styles/mainStyles.module.scss" as global;
+
+// are also used in ProductAbout.module.scss
+$headerPadding: 20px;
+$headerHeight: 30px;
+
+.header {
+  padding: $headerPadding 0;
+  height: $headerHeight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: global.$colorPeach;
+
+  -webkit-appearance: none;
+  -webkit-box-shadow: 1px 1px 10px global.$colorShadow; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 1px 1px 10px global.$colorShadow; /* Firefox 3.5 - 3.6 */
+  box-shadow: 1px 1px 10px global.$colorShadow;
+}
+
+.header__logoWrapper {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header__logoWrapper img {
+  display: block;
+  width: 100px;
+  content: url("../../assets/img/logo.png");
+}
+
+.header__changeTheme {
+  position: absolute;
+  right: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.header__changeTheme__handler {
+  position: relative;
+  border-radius: 20px;
+  background-color: white;
+  border: 2px solid black;
+  width: 40px;
+  height: 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header__changeTheme__handler__toggle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid black;
+  top: -2px;
+  left: -2px;
+  width: 15px;
+  height: 15px;
+}
+
+.header__changeTheme__handler__toggle.activeToggle {
+  left: unset;
+  right: -2px;
+}

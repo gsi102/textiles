@@ -1,3 +1,10 @@
+$colorBlue: rgb(33, 144, 155);
+$colorPeach: rgb(238, 197, 167);
+$colorSilver: rgb(241, 241, 241);
+$colorDark: rgb(62, 62, 26);
+$colorShadow: rgb(130, 118, 106, 0.2);
+$colorShadowFocus: rgb(130, 118, 106, 0.5);
+
 /* Circular Medium */
 @font-face {
   font-family: "Circular";
@@ -17,14 +24,23 @@
 
 body,
 html {
+  font-size: 16px;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Circular", sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 *:before,
@@ -53,9 +69,21 @@ textarea {
 }
 
 .darkTheme {
+  transition: all 0.3s linear;
   filter: invert(100%);
 }
 
 .noChangeTheme {
+  transition: none;
   filter: invert(1);
+}
+
+.gridIco {
+  display: block;
+  content: url("../assets//img/grip-solid.svg");
+}
+
+.listIco {
+  display: block;
+  content: url("../assets//img/list-solid.svg");
 }
