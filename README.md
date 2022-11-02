@@ -41,3 +41,19 @@ Back:
 
 - NodeJS (express)
 - Typescript
+
+## Part 2. 
+
+**I will describe the main ideas:**
+
+- In fact, we need to build a graph based on comparing the difference in some values of elements of some one class (Textiles).
+
+- This graph should have the form of a 3d plot. For the convenience of visual perception, I would put the point 0, 0, 0 of the graph as equal to rgb (127, 127, 127). Because if we take the rgb equivalent (0,0,0) for 0, then all the elements of the graph will be too crowded.
+
+- At first, I thought to improve performance by add onclick listener event not on each element, but on the entire zone and track the coordinates of the click, correlating it with the coordinates of the element that should be in this area. But in the 3D zone it would be very difficult. I have to think about it more.
+
+- Objects in the database obviously must have references to other objects or their IDs, which are logically related to the first ones. I would call this entity the Relational Array
+
+- When setting a limit on showing the nearest points, we take the first N points from  the Relational Array which contains ranked elements.
+
+- As soon as we isolate an array of close elements, the graph should be rebuilt based on this new array (isolated elements). We take the selected number of points for isolation from the Relational Array of the object we clicked on and rebuild the graph based on the new state.
