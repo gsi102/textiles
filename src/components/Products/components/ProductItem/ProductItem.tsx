@@ -29,6 +29,8 @@ const ProductItem: FC<Props> = (props) => {
         dispatch(setProductAbout({ target: "isShow", data: true }));
       }
 
+      window.scrollTo(0, 0);
+
       lazyGetProductItemQuery({ id })
         .unwrap()
         .then((res: IProductFull) => {

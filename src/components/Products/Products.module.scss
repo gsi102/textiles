@@ -23,7 +23,7 @@
 .products.byList {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 300px;
+  width: 250px;
   gap: 1rem;
 }
 

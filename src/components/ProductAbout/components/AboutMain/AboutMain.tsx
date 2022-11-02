@@ -90,16 +90,6 @@ const AboutMain: FC<Props> = (props) => {
                   })}
                 </div>
               </div>
-              <div className={styles.about__main__top__imgs__controls}>
-                <div
-                  className={styles.controls__toLeft}
-                  onClick={() => slide("left")}
-                ></div>
-                <div
-                  className={styles.controls__toRight}
-                  onClick={() => slide("right")}
-                ></div>
-              </div>
             </div>
 
             <div className={styles.about__main__top__info}>
@@ -117,6 +107,16 @@ const AboutMain: FC<Props> = (props) => {
                 {aboutInfo.material}
               </span>
             </div>
+          </div>
+          <div className={styles.about__main__top__imgs__controls}>
+            <div
+              className={styles.controls__toLeft}
+              onClick={() => slide("left")}
+            ></div>
+            <div
+              className={styles.controls__toRight}
+              onClick={() => slide("right")}
+            ></div>
           </div>
           <div className={styles.about__main__bottom}>
             <Button className={styles.about__main__bottom__btn}>Share</Button>

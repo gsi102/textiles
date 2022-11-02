@@ -1,6 +1,7 @@
 .products__item {
   display: grid;
-  grid-template-rows: 250px 4rem;
+  grid-template-rows: 160px 4rem;
+  // grid-template-columns: repeat(auto-fill, 1fr);
   transition: all 0.5s linear;
   border-radius: 20px;
 
@@ -23,9 +24,12 @@
 
 .product__img {
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  // width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(auto, 140px);
 }
 
 .product__img img {
@@ -55,7 +59,4 @@
 }
 
 @media screen and (max-width: 480px) {
-  .products__item {
-    grid-template-rows: 200px 4rem;
-  }
 }
